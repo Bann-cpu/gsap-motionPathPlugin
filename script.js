@@ -25,7 +25,7 @@ gsap.to(".depart-path", {
   motionPath: {
     path: "#tr-path",
     align: "#tr-path",
-    autoRotate: true,
     alignOrigin: [0.5, 0.5], //aligner
+    autoRotate: true,
   }
 })
