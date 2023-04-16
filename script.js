@@ -1,7 +1,15 @@
-let words = gsap.utils.toArray(h1),
-    tl = gsap.timeline({delay: 0.5}),
-    timePerCharacter = 0.2;
+gsap.registerPlugin(MotionPathPlugin);
 
-words.forEach(el => {
-  tl.from(el, {text: "", duration: el.innerHTML.length * timePerCharacter, ease: "none"});
-});
+gsap.to("#rect", {
+  ease: "power3.out",
+  duration: 5,
+  yoyo: true,
+  repeat: 12,
+  repeatDelay: 3,
+  motionPath: {
+    path: "#path",
+    align: "#path",
+    alignOrigin: [0.5, 0.5], //aligner
+    autoRotate: true
+  }
+})
